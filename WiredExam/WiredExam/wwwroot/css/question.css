@@ -1,0 +1,366 @@
+﻿
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
+
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
+
+figure {
+  margin: 1em 40px; }
+
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+audio,
+video {
+  display: inline-block; }
+
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+img {
+  border-style: none;
+  vertical-align: middle; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  border: 0;
+  outline: none; }
+
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto;
+  resize: none; }
+
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+details,
+menu {
+  display: block; }
+
+summary {
+  display: list-item; }
+
+canvas {
+  display: inline-block; }
+
+template {
+  display: none; }
+
+[hidden] {
+  display: none; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+ol, ul {
+  list-style: none; }
+
+fieldset, ul, ol, button, menu {
+  padding: 0; }
+
+blockquote, dl, dd, h1, h2, h3, h4, h5, h6, figure, p, pre, fieldset, ul, ol, menu, form {
+  margin: 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+td {
+  padding: 0; }
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: black;
+  font-size: 14px;
+  font-weight: 500; }
+
+.container {
+    width:100%!important;
+  max-width: 980px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.Header {
+  margin-top: 60px; }
+  .Header-title {
+    font-size: 2.6rem;
+    font-weight: 600;
+    text-align: center; }
+  .Header .desc {
+    margin: 60px; }
+    .Header .desc p {
+      font-size: 1.2rem;
+      text-align: center; }
+
+.Questions .container {
+  display: flex;
+  flex-flow: wrap; }
+.Questions-item {
+  flex: 0 0 50%;
+  margin: 20px 0; }
+  @media (max-width: 576px) {
+    .Questions-item {
+      flex: 0 0 100%;
+      margin: 20px; } }
+  .Questions-item p {
+    padding-right: 20px; }
+    .Questions-item p span {
+      font-size: 1rem;
+      font-weight: bold;
+      padding-right: 10px; }
+  @media (max-width: 576px) {
+    .Questions-item p {
+      padding: 20px; } }
+  .Questions-item-answers {
+    margin-top: 20px;
+    margin-right: 40px; }
+    .Questions-item-answers li {
+      width: 100%;
+      margin-bottom: 6px; }
+
+    /*.Questions-item-answers li:hover {
+        background-color:cornflowerblue;
+    }*/
+
+      .Questions-item-answers li input[type="radio"] {
+        display: none; }
+      .Questions-item-answers li label {
+        cursor: pointer;
+        display: block;
+        padding: 10px 16px;
+        width: 100%;
+        border: 2px solid #000;
+        text-shadow: 2px 2px 2px #ccc;
+        box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.3); }
+
+        .Questions-item-answers li:hover label {
+            background-color: #5ddac9;
+            color: white;
+            transition:0.2s ease;
+        }
+            .Questions-item-answers li label span {
+          font-weight: bold; }
+      .Questions-item-answers li input[type="radio"]:checked + label {
+        background: #fdf944; }
+.Questions .send-button {
+  width: 100%;
+  text-align: center; }
+  .Questions .send-button button {
+    border: 2px solid #000;
+    padding: 10px 20px;
+    background: transparent;
+    font-weight: bold; }
+
+
+
+  .okay + label{background-color:green!important;}
+  .wrong + label{background-color:red!important;}

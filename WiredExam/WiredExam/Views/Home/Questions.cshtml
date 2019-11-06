@@ -1,0 +1,225 @@
+﻿@model IEnumerable<DataModel.QuestionsModel>
+@{
+    ViewData["Title"] = "Sınav Oluştur";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="center-box" style="width:unset">
+            <div class="modal hide fade" id="myModal">
+                <div class="modal-header">
+                    <a class="close" data-dismiss="modal">×</a>
+                    <h3>Metin Yükleniyor. </h3>
+                </div>
+                <div class="modal-body">
+                    <p>Yükleniyor...</p>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">EXAM</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        <ul class="nav navbar-nav">
+                            @if (ViewBag.Statu != "2")
+                            {
+                                <li><a href="@Url.Action("Questions","Home")">Sınav Ekle</a></li>
+                            }
+                            <li><a href="@Url.Action("Exams","Home")">Sınavlar</a></li>
+                        </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+
+
+
+            <form action="@Url.Action("AddExam","Home")" method="post">
+                <div>
+                    <select id="TopicHead" name="Topic" class="selectBox">
+                        <option value="0">Seçiniz...</option>
+                        @for (int i = 0; i < Model.Count(); i++)
+                        {
+                            <option id="@i" value="@Model.ElementAt(i).Topic">@Model.ElementAt(i).Topic</option>
+                        }
+
+                    </select>
+                </div>
+
+                <div>
+                    <textarea name="Description" id="Description" class="textAreaBox" rows="10"></textarea>
+                </div>
+
+                <div>
+                    <input name="Questions1" id="Question1" class="widthFull padding10" placeholder="1. Soru" />
+                </div>
+                <div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">A-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyA1" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">B-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyB1" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">C-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyC1" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">D-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyD1" aria-describedby="basic-addon1">
+                    </div>
+
+
+                    <select id="TrueReply1" name="TrueReply1" class="replyTrue">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+
+
+                <div style="margin-top:20px;"></div>
+                <div>
+                    <input name="Questions2" id="Question2" class="widthFull padding10" placeholder="2. Soru" />
+                </div>
+                <div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">A-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyA2" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">B-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyB2" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">C-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyC2" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">D-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyD2" aria-describedby="basic-addon1">
+                    </div>
+                    <select id="TrueReply2" name="TrueReply2" class="replyTrue">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+
+
+                <div style="margin-top:20px;"></div>
+                <div>
+                    <input name="Questions3" id="Question3" class="widthFull padding10" placeholder="3. Soru" />
+                </div>
+                <div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">A-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyA3" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">B-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyB3" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">C-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyC3" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">D-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyD3" aria-describedby="basic-addon1">
+                    </div>
+                    <select id="TrueReply3" name="TrueReply3" class="replyTrue">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+
+
+                <div style="margin-top:20px;"></div>
+                <div>
+                    <input name="Questions4" id="Question4" class="widthFull padding10" placeholder="4. Soru" />
+                </div>
+                <div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">A-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyA4" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">B-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyB4" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">C-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyC4" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group inputReplyGroup">
+                        <span class="input-group-addon" id="basic-addon1">D-)</span>
+                        <input type="text" class="form-control reply1" name="ReplyD4" aria-describedby="basic-addon1">
+                    </div>
+                    <select id="TrueReply4" name="TrueReply4" class="replyTrue">
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                    </select>
+                </div>
+                <div class="margin20top"></div>
+                <div>
+                    <button type="submit" class="btn btn-success widthFull questionbutton">
+                        <span class="glyphicon glyphicon-ok" area-hidden="true"></span> SINAV OLUŞTUR
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+@section scripts {
+    <script>
+        $(document).ready(function () {
+
+
+            $('#TopicHead').change(function () {
+
+                $('#myModal').modal('show');
+                $.ajax({
+                    type: "post",
+                    url: '@Url.Action("GetAsk", "Home")',
+                    data: { ID : $(this).children(":selected").attr("id") },
+                    success: function (data) {
+                        $("#Description").val(data);
+
+                        $('#myModal').modal('hide');
+
+                    }
+                });
+
+            });
+        });
+
+
+
+    </script>
+}
+

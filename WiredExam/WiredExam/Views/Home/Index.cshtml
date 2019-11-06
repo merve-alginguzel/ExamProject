@@ -1,0 +1,35 @@
+﻿@{
+    ViewData["Title"] = "Giriş";
+    int Statu = Convert.ToInt32(ViewBag.Statu);
+}
+
+
+
+<div class="container">
+    <div style="margin-top:30px"></div>
+    <div class="card card-container">
+        <h2 class='login_title text-center'>KULLANICI GİRİŞ</h2>
+        <hr>
+        <form action="@Url.Action("LoginControl", "Home")" class="form-signin">
+            <span id="reauth-email" class="reauth-email"></span>
+            <p class="input_title">Kullanıcı Adınız</p>
+            <input type="text" name="Username" id="inputEmail" class="login_box" placeholder="Kullanıcı Adınız" required autofocus>
+            <p class="input_title">Şifreniz</p>
+            <input type="password" name="Password" id="inputPassword" class="login_box" placeholder="******" required>
+
+            <button class="btn btn-lg btn-primary" type="submit">Giriş Yap</button>
+            @{
+                if (Statu < 0)
+                {
+                    <div class="alert alert-danger" role="alert">Girişiniz yasaklanmıştır</div>
+                }
+                if (ViewBag.Hata != null)
+                {
+                    <div class="alert alert-danger" role="alert">Kullanıcı isminiz veya parolanız yanlış !</div>
+                }
+
+            }
+        </form><!-- /form -->
+    </div><!-- /card-container -->
+</div>
+

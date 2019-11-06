@@ -1,0 +1,12 @@
+C:\Users\merve\source\repos\WiredExam\DataConnection\bin\Debug\netcoreapp2.1\DataConnection.deps.json
+C:\Users\merve\source\repos\WiredExam\DataConnection\bin\Debug\netcoreapp2.1\DataConnection.dll
+C:\Users\merve\source\repos\WiredExam\DataConnection\obj\Debug\netcoreapp2.1\DataConnection.csproj.CoreCompileInputs.cache
+C:\Users\merve\source\repos\WiredExam\DataConnection\obj\Debug\netcoreapp2.1\DataConnection.AssemblyInfoInputs.cache
+C:\Users\merve\source\repos\WiredExam\DataConnection\obj\Debug\netcoreapp2.1\DataConnection.AssemblyInfo.cs
+C:\Users\merve\source\repos\WiredExam\DataConnection\bin\Debug\netcoreapp2.1\Db\ExamSQL.s3db
+C:\Users\merve\source\repos\WiredExam\DataConnection\bin\Debug\netcoreapp2.1\DataConnection.runtimeconfig.json
+C:\Users\merve\source\repos\WiredExam\DataConnection\bin\Debug\netcoreapp2.1\DataConnection.runtimeconfig.dev.json
+C:\Users\merve\source\repos\WiredExam\DataConnection\bin\Debug\netcoreapp2.1\DataConnection.pdb
+C:\Users\merve\source\repos\WiredExam\DataConnection\obj\Debug\netcoreapp2.1\DataConnection.dll
+C:\Users\merve\source\repos\WiredExam\DataConnection\obj\Debug\netcoreapp2.1\DataConnection.pdb
+C:\Users\merve\source\repos\WiredExam\DataConnection\obj\Debug\netcoreapp2.1\DataConnection.csprojAssemblyReference.cache

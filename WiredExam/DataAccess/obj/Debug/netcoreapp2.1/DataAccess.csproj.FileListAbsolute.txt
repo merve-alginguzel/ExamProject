@@ -1,0 +1,15 @@
+C:\Users\merve\source\repos\WiredExam\DataAccess\obj\Debug\netcoreapp2.1\DataAccess.csprojAssemblyReference.cache
+C:\Users\merve\source\repos\WiredExam\DataAccess\obj\Debug\netcoreapp2.1\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\merve\source\repos\WiredExam\DataAccess\obj\Debug\netcoreapp2.1\DataAccess.AssemblyInfoInputs.cache
+C:\Users\merve\source\repos\WiredExam\DataAccess\obj\Debug\netcoreapp2.1\DataAccess.AssemblyInfo.cs
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\Db\ExamSQL.s3db
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\DataAccess.deps.json
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\DataAccess.dll
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\DataAccess.pdb
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\DataConnection.dll
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\DataModel.dll
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\DataConnection.pdb
+C:\Users\merve\source\repos\WiredExam\DataAccess\bin\Debug\netcoreapp2.1\DataModel.pdb
+C:\Users\merve\source\repos\WiredExam\DataAccess\obj\Debug\netcoreapp2.1\DataAccess.csproj.CopyComplete
+C:\Users\merve\source\repos\WiredExam\DataAccess\obj\Debug\netcoreapp2.1\DataAccess.dll
+C:\Users\merve\source\repos\WiredExam\DataAccess\obj\Debug\netcoreapp2.1\DataAccess.pdb

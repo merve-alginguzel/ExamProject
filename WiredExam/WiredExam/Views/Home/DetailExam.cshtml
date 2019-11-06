@@ -1,0 +1,167 @@
+﻿@model DataModel.QuestionsModel
+@{
+    ViewData["Title"] = "Sınav Detayı";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="center-box">
+
+
+            <center style="margin-bottom:10px;"><h2>@Model.Topic</h2></center>
+            <center><h5>@Model.Description</h5></center>
+            <div style="clear:both"></div>
+
+            <section class="Questions">
+                <form class="container">
+                    <article class="Questions-item">
+                        <p>1-) @Model.Questions1</p>
+                        <ul class="Questions-item-answers">
+                            <li>
+                                <input type="radio" name="q1" id="q1a" value="A">
+                                <label for="q1a"><span>A )</span> @Model.ReplyA1</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q1" id="q1b" value="B">
+                                <label for="q1b"><span>B )</span> @Model.ReplyB1</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q1" id="q1c" value="C">
+                                <label for="q1c"><span>C )</span> @Model.ReplyC1</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q1" id="q1d" value="D">
+                                <label for="q1d"><span>D )</span> @Model.ReplyD1</label>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="Questions-item">
+
+                        <p>2-) @Model.Questions2</p>
+                        <ul class="Questions-item-answers">
+                            <li>
+                                <input type="radio" name="q2" id="q2a" value="A">
+                                <label for="q2a"><span>A )</span> @Model.ReplyA2</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q2" id="q2b" value="B">
+                                <label for="q2b"><span>B )</span> @Model.ReplyB2</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q2" id="q2c" value="C">
+                                <label for="q2c"><span>C )</span> @Model.ReplyC2</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q2" id="q2d" value="D">
+                                <label for="q2d"><span>D )</span> @Model.ReplyD2</label>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="Questions-item">
+
+                        <p>3-) @Model.Questions3</p>
+                        <ul class="Questions-item-answers">
+                            <li>
+                                <input type="radio" name="q3" id="q3a" value="A">
+                                <label for="q3a"><span>A )</span> @Model.ReplyA3</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q3" id="q3b" value="B">
+                                <label for="q3b"><span>B )</span> @Model.ReplyB3</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q3" id="q3c" value="C">
+                                <label for="q3c"><span>C )</span> @Model.ReplyC3</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q3" id="q3d" value="D">
+                                <label for="q3d"><span>D )</span> @Model.ReplyD3</label>
+                            </li>
+                        </ul>
+                    </article>
+                    <article class="Questions-item">
+
+                        <p>4-) @Model.Questions4</p>
+                        <ul class="Questions-item-answers">
+                            <li>
+                                <input type="radio" name="q4" id="q4a" value="A">
+                                <label for="q4a"><span>A )</span> @Model.ReplyA4</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q4" id="q4b" value="B">
+                                <label for="q4b"><span>B )</span> @Model.ReplyB4</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q4" id="q4c" value="C">
+                                <label for="q4c"><span>C )</span> @Model.ReplyC4</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="q4" id="q4d" value="D">
+                                <label for="q4d"><span>D )</span> @Model.ReplyD4</label>
+                            </li>
+                        </ul>
+                    </article>
+                    <div class="send-button">
+                        <button type="button" onclick="send();">SINAVI TAMAMLA</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+    </div>
+</div>
+
+@section scripts{
+
+    <script>
+
+        function send() {
+
+            var q1 = $('input[name=q1]:checked').val();
+            var q2 = $('input[name=q2]:checked').val();
+            var q3 = $('input[name=q3]:checked').val();
+            var q4 = $('input[name=q4]:checked').val();
+
+            var ID = '@Model.ID';
+
+            $.ajax({
+                type: "post",
+                url: '@Url.Action("ControlReply", "Home")',
+                data: { q1: q1, q2: q2, q3: q3, q4:q4, ID: ID},
+                success: function (data) {
+                    console.log(data.data);
+                    console.log(q1);
+                    //alert(data.data.TrueReply1)
+                    if (q1 == data.data.trueReply1) {
+                        $('input[name=q1]:checked').addClass("okay");
+                    } else {
+                        $('input[name=q1]:checked').addClass("wrong");
+                    }
+                    if (q2 == data.data.trueReply2) {
+                        $('input[name=q2]:checked').addClass("okay");
+                    } else {
+                        $('input[name=q2]:checked').addClass("wrong");
+                    }
+                    if (q3 == data.data.trueReply3) {
+                        $('input[name=q3]:checked').addClass("okay");
+                    } else {
+                        $('input[name=q3]:checked').addClass("wrong");
+                    }
+                    if (q4 == data.data.trueReply4) {
+                        $('input[name=q4]:checked').addClass("okay");
+                    } else {
+                        $('input[name=q4]:checked').addClass("wrong");
+                    }
+
+                }
+            });
+
+
+
+        }
+
+    </script>
+
+}
+

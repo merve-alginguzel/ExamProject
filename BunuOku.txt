@@ -1,0 +1,10 @@
+
+Veritabaný Sqlite ile oluþturulmuþ olup , Db klasörü içindedir. ExamSQL.s3db
+
+Projede statüye göre kontrol yapýlmaktadýr. Eðer statü 1 ise kullanýcý hem sýnav oluþturup hem de sýnavlarý görebilir.
+Statü 2 ise sadece sýnavlarý görebilir. Statü -1 ise yasaklanmýþ kullanýcýdýr , sisteme giriþ yapamaz.
+Bunun gerekli konrolleri yapýldý ve veritabanýnda örnek kayýtlar bulunmaktadýr.
+
+Username = admin Password = admin Statü => 1
+Username = merve Password = 12345 Statü => 2
+Username = hata Password = hata   Statü => -1
